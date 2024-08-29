@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarama Sonuçları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            height: 50px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a:hover {
+            background-color: #003399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://static.wixstatic.com/media/815396_97e99ecec1174695b8bc3a64d9532f64~mv2.png/v1/fill/w_161,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/headerlogo.png" alt="Şirket Logosu">
+        Tarama Sonuçları
+    </header>
+    <h1>Sonuçlar</h1>
+    <ul>
+    {% for result in scan_results %}
+        <li>{{ result['url'] }} - Sonuç: {{ result['message'] }}</li>
+    {% endfor %}
+    </ul>
+    <a href="/">Yeni Tarama Yap</a>
+</body>
+</html>
