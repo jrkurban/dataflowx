@@ -6,7 +6,7 @@ from urllib.parse import urljoin
 
 app = Flask(__name__)
 
-VIRUSTOTAL_API_KEY = '54f738b81a18594d278037ff0b281210c5ea94550cc1f543e038e43c96daa04d'
+VIRUSTOTAL_API_KEY = ''
 VIRUSTOTAL_URL = 'https://www.virustotal.com/api/v3/urls'
 
 
