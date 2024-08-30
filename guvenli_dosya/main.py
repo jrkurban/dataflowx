@@ -5,7 +5,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 
-VIRUSTOTAL_API_KEY = '54f738b81a18594d278037ff0b281210c5ea94550cc1f543e038e43c96daa04d'
+VIRUSTOTAL_API_KEY = ''
 
 
 WATCH_DIRECTORY = '/app/watch'
